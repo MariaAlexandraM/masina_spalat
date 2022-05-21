@@ -25,7 +25,7 @@ entity bist_d is
     port (CLK: in bit;
           R: in bit; -- reset asincron
           D: in bit;
-          EN: in bit; -- enable care atunci cand devine 0, opreste numararea si ramane acolo
+          EN: in std_logic; -- enable care atunci cand devine 0, opreste numararea si ramane acolo
           Q: out bit);
 end bist_d;
 
@@ -38,7 +38,7 @@ begin
                 Q <= '0';
             elsif CLK'event and CLK = '1' then 
                 Q <= D;
-            end if;
+            end if;			  
         end if;
     end process;
 end Behavioral;

@@ -25,11 +25,11 @@ entity counter5_0 is
 	port (CLK: in bit;
 	      PL: in bit; -- parallel load activ pe 1
 	      R: in bit; -- reset activ pe 1
-	      EN: in bit;
+	      EN: in std_logic;
 	      --usa_inchisa: in bit;
 	      --start: in bit;
 		  --I: in bit_vector(2 downto 0);	 -- val cu care se face incarcarea paralela 
-		  --tcd: out bit;  -- terminal count down: activ pe 1, folosit ca si clk pt numaratorul urmator 
+		  tc: out bit;  -- terminal count down: activ pe 1, folosit ca si clk pt numaratorul urmator 
 		  Q: out bit_vector(2 downto 0)); 
 end counter5_0;				  
 
@@ -37,15 +37,16 @@ architecture Behavioral of counter5_0 is
     component bist_d is
         port (CLK: in bit;
               R: in bit; -- reset asincron
-              EN: in bit; -- enable care atunci cand devine 0, opreste numararea si ramane acolo
-              D: in bit;
+              EN: in std_logic; -- enable care atunci cand devine 0, opreste numararea si ramane acolo
+              D: in bit;	  
               Q: out bit);
     end component;
 
 --signal cifra: bit_vector(2 downto 0);
 signal D_num: BIT_VECTOR(2 downto 0) := "000";
 signal Q2, Q1, Q0: BIT;
-begin	
+begin		   
+	
     -- extrase din tabel de adevar, dupa K map, si minimizarea functiilor
     D_num(2) <= (not(Q2) and not(Q1) and not(Q0)) or (Q2 and Q0) or (Q2 and Q1 and not(Q0));
     D_num(1) <= (Q2 and not(Q1) and not(Q0)) or (not(Q2) and Q1 and Q0);
@@ -71,7 +72,18 @@ begin
     -- schimbarea de nume pentru semnale ca sa nu am multe paranteze la asignarile pentru D_num-uri
     Q(2) <= Q2;
     Q(1) <= Q1;
-    Q(0) <= Q0;
+    Q(0) <= Q0;		
+	
+	process(D_num, CLK)
+	begin 
+		if CLK'event and CLK = '1' then 
+			if Q2 = '0' and Q1 = '0' and Q0 = '0' then 
+				tc <= '1';
+			else 
+				tc <= '0';
+			end if;
+		end if;
+	end process;
     
 --	process (CLK, PL, R, usa_inchisa, start)
 --	begin 
