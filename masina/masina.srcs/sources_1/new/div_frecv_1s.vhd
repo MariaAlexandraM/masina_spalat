@@ -24,7 +24,7 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity div_frecv_1s is
 	port (clk_100Mhz: in std_logic; -- perioada de 10ns
-	  	  clk_62Hz: out std_logic); -- 1s in proiect inseamna 1/60 sec reale deci clk are frecventa de 60Hz
+	  	  clk_60Hz: out std_logic); -- 1s in proiect inseamna 1/60 sec reale deci clk are frecventa de 60Hz
 end div_frecv_1s;
 
 architecture Behavioral of div_frecv_1s is
@@ -40,6 +40,6 @@ begin
 			else nr := nr + 1; 
 			end if;
 		end if;
-		clk_62Hz <= clk_gate;
+		clk_60Hz <= clk_gate;
 	end process;
 end architecture;
