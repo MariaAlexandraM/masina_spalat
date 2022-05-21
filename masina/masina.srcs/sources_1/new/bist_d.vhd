@@ -25,6 +25,7 @@ entity bist_d is
     port (CLK: in bit;
           R: in bit; -- reset asincron
           D: in bit;
+          EN: in bit; -- enable care atunci cand devine 0, opreste numararea si ramane acolo
           Q: out bit);
 end bist_d;
 
@@ -32,10 +33,12 @@ architecture Behavioral of bist_d is
 begin
     process(CLK, R) -- depinde doar de clk si reset
     begin 
-        if R = '1' then 
-            Q <= '0';
-        elsif CLK'event and CLK = '1' then 
-            Q <= D;
+        if EN = '1' then 
+            if R = '1' then 
+                Q <= '0';
+            elsif CLK'event and CLK = '1' then 
+                Q <= D;
+            end if;
         end if;
     end process;
 end Behavioral;

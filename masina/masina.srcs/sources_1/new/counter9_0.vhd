@@ -23,8 +23,8 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity counter9_0 is	
 	port (CLK: in bit;
-	      PL: in bit; -- parallel load activ pe 1
 	      R: in bit; -- reset activ pe 1
+	      EN: in bit;
 	      --usa_inchisa: in bit;
 	      --start: in bit;
 		  --I: in bit_vector(3 downto 0);	 -- val cu care se face incarcarea paralela 
@@ -37,6 +37,7 @@ architecture Behavioral of counter9_0 is
         port (CLK: in bit;
               R: in bit; -- reset asincron
               D: in bit;
+              EN: in bit; -- enable care atunci cand devine 0, opreste numararea si ramane acolo
               Q: out bit);
     end component;
 
@@ -53,18 +54,22 @@ begin
     -- bistabilele cascadate
     D3: bist_d port map(CLK => CLK, 
                         D => D_num(3), 
+                        EN => EN,
                         R => R, 
                         Q => Q3);  
     D2: bist_d port map(CLK => CLK, 
                         D => D_num(2), 
+                        EN => EN,
                         R => R, 
                         Q => Q2);  
     D1: bist_d port map(CLK => CLK, 
                         D => D_num(1), 
+                        EN => EN,
                         R => R, 
                         Q => Q1);  
     D0: bist_d port map(CLK => CLK, 
-                        D => D_num(0), 
+                        D => D_num(0),
+                        EN => EN, 
                         R => R, 
                         Q => Q0); 
     
