@@ -23,6 +23,7 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity counter9_0 is	
 	port (CLK: in bit;
+          PL: in bit; -- parallel load activ pe 1
 	      R: in bit; -- reset activ pe 1
 	      EN: in bit;
 	      --usa_inchisa: in bit;
