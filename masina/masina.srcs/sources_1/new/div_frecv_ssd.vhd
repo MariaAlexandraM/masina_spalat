@@ -23,12 +23,12 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity div_frecv_ssd is
-	port (clk_100Mhz: in std_logic; -- perioada de 10ns
-	  	  clk_ssd: out std_logic); -- 60Hz
+	port (clk_100Mhz: in bit; -- perioada de 10ns
+	  	  clk_ssd: out bit); -- 60Hz
 end div_frecv_ssd;
 
 architecture Behavioral of div_frecv_ssd is
-signal clk_gate: std_logic := '0';
+signal clk_gate: bit := '0';
 begin
 	process(clk_100Mhz)
 	variable nr: std_logic_vector(19 downto 0) := (others => '0');																																				 

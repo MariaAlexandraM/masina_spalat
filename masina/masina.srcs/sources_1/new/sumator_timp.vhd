@@ -33,10 +33,10 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 --use UNISIM.VComponents.all;
 
 entity sumator_timp is
-    Port ( enable, presp, clatire, clk : in STD_LOGIC;
-           viteza, temp : in STD_LOGIC_VECTOR(1 downto 0);
-           sel : in STD_LOGIC_VECTOR(2 downto 0);
-           led : in STD_LOGIC_VECTOR(2 downto 0);
+    Port ( enable, presp, clatire, clk : in BIT;
+           viteza, temp : in BIT_VECTOR(1 downto 0);
+           sel : in BIT_VECTOR(2 downto 0);
+           led : in BIT_VECTOR(2 downto 0);
            timp : out STD_LOGIC_VECTOR(15 downto 0));
 end sumator_timp;
 
