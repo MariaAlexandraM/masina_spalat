@@ -25,7 +25,7 @@ entity timer_ssd is
     port (clk_60Hz: in bit;
           R: in bit; -- reset asincron
           PL: in bit;  
-		  digit_3, digit_2, digit_1, digit_0: in std_logic_vector(3 downto 0); -- fiecare cifra e reprezentata pe 4 biti 
+		  digit_3, digit_2, digit_1, digit_0: in bit_vector(3 downto 0); -- fiecare cifra e reprezentata pe 4 biti 
           Q3, Q2, Q1, Q0: out bit_vector(3 downto 0));																				
 end timer_ssd;
 
@@ -41,7 +41,7 @@ signal EN: std_logic;
 		      EN: in std_logic;
 		      --usa_inchisa: in bit;
 		      --start: in bit;
-			  --I: in bit_vector(2 downto 0);	 -- val cu care se face incarcarea paralela 
+			  I: in bit_vector(2 downto 0);	 -- val cu care se face incarcarea paralela 
 			  tc: out bit;  -- terminal count down: activ pe 1, folosit ca si clk pt numaratorul urmator 
 			  Q: out bit_vector(2 downto 0)); 
 	end component;	 
@@ -53,7 +53,7 @@ signal EN: std_logic;
 		      EN: in std_logic;
 		      --usa_inchisa: in bit;
 		      --start: in bit;
-			  --I: in bit_vector(3 downto 0);	 -- val cu care se face incarcarea paralela 
+			  I: in bit_vector(3 downto 0);	 -- val cu care se face incarcarea paralela 
 			  tc: out bit;  -- terminal count: activ pe 1, folosit ca si clk pt numaratorul urmator 
 			  Q: out bit_vector(3 downto 0)); 
 	end component;			
@@ -64,6 +64,7 @@ begin
 							   PL => PL,
 							   R => R,
 							   EN => EN, 
+							   I => digit_3,
 							   tc => tc0,
 							   Q => Q0_aux);
 	
@@ -71,6 +72,7 @@ begin
 							   PL => PL,
 							   R => R,
 							   EN => EN, 
+							   I => digit_2(2 downto 0),
 							   tc => tc1,
 							   Q => Q1_aux(2 downto 0));
 	Q1_aux(3) <= '0';		  
@@ -79,6 +81,7 @@ begin
 							   PL => PL,
 							   R => R,
 							   EN => EN, 
+							   I => digit_1,
 							   tc => tc2,
 							   Q => Q2_aux);   
 							   
@@ -86,6 +89,7 @@ begin
 							   PL => PL,
 							   R => R,
 							   EN => EN, 
+							   I => digit_0,
 							   tc => tc3,
 							   Q => Q3_aux);   	
 							   
@@ -101,6 +105,8 @@ begin
 		if clk_60Hz'event and clk_60Hz = '1' then 
 			if q_or = "0000" then 
 				EN <= '0';
+			else 
+				EN <= '1';
 			end if;
 		end if;
 		

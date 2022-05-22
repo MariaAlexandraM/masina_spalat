@@ -17,7 +17,7 @@
 -- 
 ----------------------------------------------------------------------------------
 
-library IEEE;
+library ieee;
 use IEEE.STD_LOGIC_1164.all;
 use IEEE.STD_LOGIC_UNSIGNED.ALL; 
 
@@ -28,7 +28,7 @@ entity counter9_0 is
 	      EN: in std_logic;
 	      --usa_inchisa: in bit;
 	      --start: in bit;
-		  --I: in bit_vector(3 downto 0);	 -- val cu care se face incarcarea paralela 
+		  I: in bit_vector(3 downto 0);	 -- val cu care se face incarcarea paralela 
 		  tc: out bit;  -- terminal count down: activ pe 1, folosit ca si clk pt numaratorul urmator 
 		  Q: out bit_vector(3 downto 0)); 
 end counter9_0;				  
@@ -40,12 +40,40 @@ architecture Behavioral of counter9_0 is
               D: in bit;
               EN: in std_logic; -- enable care atunci cand devine 0, opreste numararea si ramane acolo
               Q: out bit);
-    end component;
+    end component;	   
+	
+	component mux2_1 is
+    	port(PL: in bit; -- folosit ca selectie 
+       	     X: in bit_vector(1 downto 0);
+        	 Y: out bit);
+	end component;
+	
 
 --signal cifra: bit_vector(3 downto 0);
-signal D_num: BIT_VECTOR(3 downto 0) := "0000";
-signal Q3, Q2, Q1, Q0: BIT;
-begin
+signal D_num: bit_vector(3 downto 0) := "0000";
+signal Q3, Q2, Q1, Q0: bit;	   
+signal iesire_mux: bit_vector(3 downto 0);
+begin					
+	mux3: mux2_1 port map(PL => PL,
+					   	  X(1) => I(3),
+						  X(0) => D_num(3),
+						  Y => iesire_mux(3));
+						  
+	mux2: mux2_1 port map(PL => PL,
+					   	  X(1) => I(2),
+						  X(0) => D_num(2),
+						  Y => iesire_mux(2));	
+						  
+	mux1: mux2_1 port map(PL => PL,
+					   	  X(1) => I(1),
+						  X(0) => D_num(1),
+						  Y => iesire_mux(1));	 
+						  
+	mux0: mux2_1 port map(PL => PL,
+					   	  X(1) => I(0),
+						  X(0) => D_num(0),
+						  Y => iesire_mux(0));
+	
     -- extrase din tabel de adevar, dupa K map, si minimizarea functiilor
     D_num(3) <= (not(Q3) and not(Q2) and not(Q1) and not(Q0)) or (Q3 and Q2) or (Q3 and not(Q1) and Q0) or (Q3 and Q1);
     D_num(2) <= (Q3 and not(Q2) and not(Q1) and not(Q0)) or (not(Q3) and Q2 and Q1) or (not(Q3) and Q2 and Q0);
@@ -54,22 +82,22 @@ begin
 
     -- bistabilele cascadate
     D3: bist_d port map(CLK => CLK, 
-                        D => D_num(3), 
+                        D => iesire_mux(3), 
                         EN => EN,
                         R => R, 
                         Q => Q3);  
     D2: bist_d port map(CLK => CLK, 
-                        D => D_num(2), 
+                        D => iesire_mux(2), 
                         EN => EN,
                         R => R, 
                         Q => Q2);  
     D1: bist_d port map(CLK => CLK, 
-                        D => D_num(1), 
+                        D => iesire_mux(1), 
                         EN => EN,
                         R => R, 
                         Q => Q1);  
     D0: bist_d port map(CLK => CLK, 
-                        D => D_num(0),
+                        D => iesire_mux(0),
                         EN => EN, 
                         R => R, 
                         Q => Q0); 
@@ -78,17 +106,19 @@ begin
     Q(3) <= Q3;
     Q(2) <= Q2;
     Q(1) <= Q1;
-    Q(0) <= Q0;		   
+    Q(0) <= Q0;	
+	
+	
 	
 	process(D_num, CLK)
-	begin 
+	begin 		 
 		if CLK'event and CLK = '1' then 
-			if Q3 = '0' and Q2 = '0' and Q1 = '0' and Q0 = '0' then 
+			if (Q3 = '0' and Q2 = '0' and Q1 = '0' and Q0 = '0') or (I = "0000" and PL = '1') then 
 				tc <= '1';
 			else 
 				tc <= '0';
 			end if;
-		end if;
+		end if;	  
 	end process;
     
 --	process (CLK, PL, R, usa_inchisa, start)
@@ -112,9 +142,9 @@ begin
 --				end case;		
 --			end if;	   
 --			if (cifra = "0000") or (I = "0000" and PL = '1') then
---				tcd <= '1';
+--				tc <= '1';
 --			else
---				tcd <= '0';	
+--				tc <= '0';	
 --			end if;		  
 --			Q <= cifra; 	   
 --	end process;	   

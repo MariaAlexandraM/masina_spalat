@@ -28,8 +28,8 @@ entity counter5_0 is
 	      EN: in std_logic;
 	      --usa_inchisa: in bit;
 	      --start: in bit;
-		  --I: in bit_vector(2 downto 0);	 -- val cu care se face incarcarea paralela 
-		  tc: out bit;  -- terminal count down: activ pe 1, folosit ca si clk pt numaratorul urmator 
+		  I: in bit_vector(2 downto 0);	 -- val cu care se face incarcarea paralela 
+		  tc: out bit;  -- terminal count: activ pe 1, folosit ca si clk pt numaratorul urmator 
 		  Q: out bit_vector(2 downto 0)); 
 end counter5_0;				  
 
@@ -40,12 +40,34 @@ architecture Behavioral of counter5_0 is
               EN: in std_logic; -- enable care atunci cand devine 0, opreste numararea si ramane acolo
               D: in bit;	  
               Q: out bit);
-    end component;
+    end component;	   
+	
+	component mux2_1 is
+    	port(PL: in bit; -- folosit ca selectie 
+       	     X: in bit_vector(1 downto 0);
+        	 Y: out bit);
+	end component;
 
 --signal cifra: bit_vector(2 downto 0);
 signal D_num: BIT_VECTOR(2 downto 0) := "000";
-signal Q2, Q1, Q0: BIT;
+signal Q2, Q1, Q0: BIT;			  
+signal iesire_mux: bit_vector(2 downto 0);
 begin		   
+	
+	mux2: mux2_1 port map(PL => PL,
+					   	  X(1) => I(2),
+						  X(0) => D_num(2),
+						  Y => iesire_mux(2));	
+						  
+	mux1: mux2_1 port map(PL => PL,
+					   	  X(1) => I(1),
+						  X(0) => D_num(1),
+						  Y => iesire_mux(1));	 
+						  
+	mux0: mux2_1 port map(PL => PL,
+					   	  X(1) => I(0),
+						  X(0) => D_num(0),
+						  Y => iesire_mux(0));
 	
     -- extrase din tabel de adevar, dupa K map, si minimizarea functiilor
     D_num(2) <= (not(Q2) and not(Q1) and not(Q0)) or (Q2 and Q0) or (Q2 and Q1 and not(Q0));
@@ -102,9 +124,9 @@ begin
 --			end case;		
 --		end if;	   
 --		if (cifra = "0000") or (I = "0000" and PL = '1') then
---			tcd <= '1';
+--			tc <= '1';
 --		else
---			tcd <= '0';	
+--			tc <= '0';	
 --		end if;		  
 --		Q <= cifra; 	   
 --	end process;	   

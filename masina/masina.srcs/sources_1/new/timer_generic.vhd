@@ -24,7 +24,8 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 											
 entity timer_generic is						   
 	generic(n: integer);
-	port(clk_1Hz: in std_logic; -- 1min in proiect inseamna 1s reala adica 1Hz	
+	port(clk_1Hz: in std_logic; -- 1min in proiect inseamna 1s reala adica 1Hz
+		 en: in std_logic;
 		 gata: out std_logic);
 end timer_generic;
 
@@ -34,16 +35,18 @@ signal gata_aux: std_logic; -- semnal intermediar pt gata
 begin  	  
 	process(clk_1Hz)
 		variable nr: integer := 0; -- numar pana la n - 1 		   			  
-	begin					  					  
-		if clk_1Hz'event and clk_1Hz = '1' then
-			if (nr = n - 1) then 
-				gata_aux <= '1'; 
-				nr := 0;
-			else 
-				nr := nr + 1;
-				gata_aux <= '0';
-			end if;
-		end if;	
+	begin			
+		if en = '1' then 
+			if clk_1Hz'event and clk_1Hz = '1' then
+				if (nr = n - 1) then 
+					gata_aux <= '1'; 
+					nr := 0;
+				else 
+					nr := nr + 1;
+					gata_aux <= '0';
+				end if;
+			end if;	
+		end if;
 	end process;
 	
 	gata <= gata_aux;
