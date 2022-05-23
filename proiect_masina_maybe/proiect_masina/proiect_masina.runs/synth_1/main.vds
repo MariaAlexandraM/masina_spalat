@@ -1,0 +1,620 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun May 22 21:26:44 2022
+# Process ID: 18888
+# Current directory: F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.runs/synth_1
+# Command line: vivado.exe -log main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
+# Log file: F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.runs/synth_1/main.vds
+# Journal file: F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source main.tcl -notrace
+Command: synth_design -top main -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 1184 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 386.355 ; gain = 99.695
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'main' [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:45]
+INFO: [Synth 8-3491] module 'MPG' declared at 'F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/MPG.vhd:36' bound to instance 'MPG1' of component 'MPG' [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:123]
+INFO: [Synth 8-638] synthesizing module 'MPG' [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/MPG.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'MPG' (1#1) [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/MPG.vhd:42]
+INFO: [Synth 8-3491] module 'sumator_timp' declared at 'F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/Sumator_Timp.vhd:35' bound to instance 'SUMATOR_TIMP1' of component 'sumator_timp' [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:124]
+INFO: [Synth 8-638] synthesizing module 'sumator_timp' [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/Sumator_Timp.vhd:42]
+WARNING: [Synth 8-614] signal 'timp' is read in the process but is not in the sensitivity list [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/Sumator_Timp.vhd:45]
+WARNING: [Synth 8-3848] Net digits in module/entity sumator_timp does not have driver. [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/Sumator_Timp.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'sumator_timp' (2#1) [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/Sumator_Timp.vhd:42]
+INFO: [Synth 8-3491] module 'SSD' declared at 'F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/SSD.vhd:36' bound to instance 'SSD1' of component 'SSD' [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:125]
+INFO: [Synth 8-638] synthesizing module 'SSD' [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/SSD.vhd:43]
+WARNING: [Synth 8-614] signal 'digit' is read in the process but is not in the sensitivity list [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/SSD.vhd:57]
+INFO: [Synth 8-226] default block is never used [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/SSD.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'SSD' (3#1) [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/SSD.vhd:43]
+INFO: [Synth 8-3491] module 'div_frecv_1min' declared at 'F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/div_frecv1min.vhd:26' bound to instance 'CLK1min' of component 'div_frecv_1min' [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:126]
+INFO: [Synth 8-638] synthesizing module 'div_frecv_1min' [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/div_frecv1min.vhd:31]
+WARNING: [Synth 8-614] signal 'clk_gate' is read in the process but is not in the sensitivity list [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/div_frecv1min.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'div_frecv_1min' (4#1) [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/div_frecv1min.vhd:31]
+INFO: [Synth 8-3491] module 'div_frecv_1s' declared at 'F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/div_frecv1sec.vhd:26' bound to instance 'CLK1sec' of component 'div_frecv_1s' [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:127]
+INFO: [Synth 8-638] synthesizing module 'div_frecv_1s' [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/div_frecv1sec.vhd:31]
+WARNING: [Synth 8-614] signal 'clk_gate' is read in the process but is not in the sensitivity list [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/div_frecv1sec.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'div_frecv_1s' (5#1) [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/div_frecv1sec.vhd:31]
+INFO: [Synth 8-3491] module 'timer_ssd' declared at 'F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/timer_ssd.vhd:26' bound to instance 'timer' of component 'timer_ssd' [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:130]
+INFO: [Synth 8-638] synthesizing module 'timer_ssd' [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/timer_ssd.vhd:34]
+INFO: [Synth 8-3491] module 'count9_0' declared at 'F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/count9_0.vhd:35' bound to instance 'num_0' of component 'count9_0' [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/timer_ssd.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'count9_0' [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/count9_0.vhd:42]
+WARNING: [Synth 8-614] signal 'I' is read in the process but is not in the sensitivity list [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/count9_0.vhd:46]
+WARNING: [Synth 8-614] signal 'cifra' is read in the process but is not in the sensitivity list [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/count9_0.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'count9_0' (6#1) [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/count9_0.vhd:42]
+INFO: [Synth 8-3491] module 'count5_0' declared at 'F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/count5_0.vhd:35' bound to instance 'num_1' of component 'count5_0' [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/timer_ssd.vhd:64]
+INFO: [Synth 8-638] synthesizing module 'count5_0' [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/count5_0.vhd:42]
+WARNING: [Synth 8-614] signal 'I' is read in the process but is not in the sensitivity list [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/count5_0.vhd:46]
+WARNING: [Synth 8-614] signal 'cifra' is read in the process but is not in the sensitivity list [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/count5_0.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'count5_0' (7#1) [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/count5_0.vhd:42]
+INFO: [Synth 8-3491] module 'count9_0' declared at 'F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/count9_0.vhd:35' bound to instance 'num_2' of component 'count9_0' [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/timer_ssd.vhd:72]
+INFO: [Synth 8-3491] module 'count9_0' declared at 'F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/count9_0.vhd:35' bound to instance 'num_3' of component 'count9_0' [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/timer_ssd.vhd:80]
+INFO: [Synth 8-256] done synthesizing module 'timer_ssd' (8#1) [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/timer_ssd.vhd:34]
+WARNING: [Synth 8-3848] Net beculets in module/entity main does not have driver. [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:108]
+INFO: [Synth 8-256] done synthesizing module 'main' (9#1) [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:45]
+WARNING: [Synth 8-3331] design count9_0 has unconnected port I[3]
+WARNING: [Synth 8-3331] design count5_0 has unconnected port I[3]
+WARNING: [Synth 8-3331] design sumator_timp has unconnected port digits[15]
+WARNING: [Synth 8-3331] design sumator_timp has unconnected port digits[14]
+WARNING: [Synth 8-3331] design sumator_timp has unconnected port digits[13]
+WARNING: [Synth 8-3331] design sumator_timp has unconnected port digits[12]
+WARNING: [Synth 8-3331] design sumator_timp has unconnected port digits[11]
+WARNING: [Synth 8-3331] design sumator_timp has unconnected port digits[10]
+WARNING: [Synth 8-3331] design sumator_timp has unconnected port digits[9]
+WARNING: [Synth 8-3331] design sumator_timp has unconnected port digits[8]
+WARNING: [Synth 8-3331] design sumator_timp has unconnected port digits[7]
+WARNING: [Synth 8-3331] design sumator_timp has unconnected port digits[6]
+WARNING: [Synth 8-3331] design sumator_timp has unconnected port digits[5]
+WARNING: [Synth 8-3331] design sumator_timp has unconnected port digits[4]
+WARNING: [Synth 8-3331] design sumator_timp has unconnected port digits[3]
+WARNING: [Synth 8-3331] design sumator_timp has unconnected port digits[2]
+WARNING: [Synth 8-3331] design sumator_timp has unconnected port digits[1]
+WARNING: [Synth 8-3331] design sumator_timp has unconnected port digits[0]
+WARNING: [Synth 8-3331] design sumator_timp has unconnected port enable
+WARNING: [Synth 8-3331] design sumator_timp has unconnected port presp
+WARNING: [Synth 8-3331] design sumator_timp has unconnected port clatire
+WARNING: [Synth 8-3331] design sumator_timp has unconnected port clk
+WARNING: [Synth 8-3331] design sumator_timp has unconnected port viteza[1]
+WARNING: [Synth 8-3331] design sumator_timp has unconnected port viteza[0]
+WARNING: [Synth 8-3331] design sumator_timp has unconnected port temp[1]
+WARNING: [Synth 8-3331] design sumator_timp has unconnected port temp[0]
+WARNING: [Synth 8-3331] design sumator_timp has unconnected port sel[2]
+WARNING: [Synth 8-3331] design sumator_timp has unconnected port sel[1]
+WARNING: [Synth 8-3331] design sumator_timp has unconnected port sel[0]
+WARNING: [Synth 8-3331] design main has unconnected port led[15]
+WARNING: [Synth 8-3331] design main has unconnected port led[14]
+WARNING: [Synth 8-3331] design main has unconnected port led[13]
+WARNING: [Synth 8-3331] design main has unconnected port led[12]
+WARNING: [Synth 8-3331] design main has unconnected port led[11]
+WARNING: [Synth 8-3331] design main has unconnected port led[10]
+WARNING: [Synth 8-3331] design main has unconnected port led[9]
+WARNING: [Synth 8-3331] design main has unconnected port led[8]
+WARNING: [Synth 8-3331] design main has unconnected port led[7]
+WARNING: [Synth 8-3331] design main has unconnected port led[6]
+WARNING: [Synth 8-3331] design main has unconnected port led[5]
+WARNING: [Synth 8-3331] design main has unconnected port led[4]
+WARNING: [Synth 8-3331] design main has unconnected port led[3]
+WARNING: [Synth 8-3331] design main has unconnected port led[2]
+WARNING: [Synth 8-3331] design main has unconnected port led[1]
+WARNING: [Synth 8-3331] design main has unconnected port led[0]
+WARNING: [Synth 8-3331] design main has unconnected port btn[4]
+WARNING: [Synth 8-3331] design main has unconnected port btn[3]
+WARNING: [Synth 8-3331] design main has unconnected port btn[2]
+WARNING: [Synth 8-3331] design main has unconnected port btn[1]
+WARNING: [Synth 8-3331] design main has unconnected port sw[6]
+WARNING: [Synth 8-3331] design main has unconnected port sw[5]
+WARNING: [Synth 8-3331] design main has unconnected port sw[4]
+WARNING: [Synth 8-3331] design main has unconnected port sw[3]
+WARNING: [Synth 8-3331] design main has unconnected port sw[2]
+WARNING: [Synth 8-3331] design main has unconnected port sw[1]
+WARNING: [Synth 8-3331] design main has unconnected port sw[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 443.039 ; gain = 156.379
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 443.039 ; gain = 156.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 443.039 ; gain = 156.379
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc]
+WARNING: [Vivado 12-584] No ports matched 'CLK100MHZ'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:2]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:2]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CLK100MHZ'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:3]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:3]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CLK100MHZ'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:4]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports CLK100MHZ]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:4]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'LED[0]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[0]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[2]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[2]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[3]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:48]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[3]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:49]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:49]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[4]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[4]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[5]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[5]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:56]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:57]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[8]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:58]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[8]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:59]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[9]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:60]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[9]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:61]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[10]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:62]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:62]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[10]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[11]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[11]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:65]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[12]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[12]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[13]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[13]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:78]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:78]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:79]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:79]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:80]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:80]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:81]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:81]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:86]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:86]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:88]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:88]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:89]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:89]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:90]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:90]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dp'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:92]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:92]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dp'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:93]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:93]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnC'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:106]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:106]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnC'. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:107]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc:107]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [F:/Masina_de_spalat/masina/masina.srcs/constrs_1/new/basys3_constr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 766.098 ; gain = 0.000
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 766.098 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 766.098 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 766.098 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 766.098 ; gain = 479.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 766.098 ; gain = 479.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 766.098 ; gain = 479.438
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "cifra" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'PL_reg' [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/count9_0.vhd:49]
+WARNING: [Synth 8-327] inferring latch for variable 'PL_reg' [F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.srcs/sources_1/new/count5_0.vhd:49]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 766.098 ; gain = 479.438
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 4     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 6     
+	   2 Input      4 Bit        Muxes := 8     
+	   2 Input      3 Bit        Muxes := 5     
+	   6 Input      3 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module MPG 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
+Module SSD 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 2     
+Module div_frecv_1min 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module div_frecv_1s 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module count9_0 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+Module count5_0 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   6 Input      3 Bit        Muxes := 1     
+Module timer_ssd 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design main has unconnected port led[15]
+WARNING: [Synth 8-3331] design main has unconnected port led[14]
+WARNING: [Synth 8-3331] design main has unconnected port led[13]
+WARNING: [Synth 8-3331] design main has unconnected port led[12]
+WARNING: [Synth 8-3331] design main has unconnected port led[11]
+WARNING: [Synth 8-3331] design main has unconnected port led[10]
+WARNING: [Synth 8-3331] design main has unconnected port led[9]
+WARNING: [Synth 8-3331] design main has unconnected port led[8]
+WARNING: [Synth 8-3331] design main has unconnected port led[7]
+WARNING: [Synth 8-3331] design main has unconnected port led[6]
+WARNING: [Synth 8-3331] design main has unconnected port led[5]
+WARNING: [Synth 8-3331] design main has unconnected port led[4]
+WARNING: [Synth 8-3331] design main has unconnected port led[3]
+WARNING: [Synth 8-3331] design main has unconnected port led[2]
+WARNING: [Synth 8-3331] design main has unconnected port led[1]
+WARNING: [Synth 8-3331] design main has unconnected port led[0]
+WARNING: [Synth 8-3331] design main has unconnected port btn[4]
+WARNING: [Synth 8-3331] design main has unconnected port btn[3]
+WARNING: [Synth 8-3331] design main has unconnected port btn[2]
+WARNING: [Synth 8-3331] design main has unconnected port btn[1]
+WARNING: [Synth 8-3331] design main has unconnected port sw[15]
+WARNING: [Synth 8-3331] design main has unconnected port sw[14]
+WARNING: [Synth 8-3331] design main has unconnected port sw[13]
+WARNING: [Synth 8-3331] design main has unconnected port sw[12]
+WARNING: [Synth 8-3331] design main has unconnected port sw[11]
+WARNING: [Synth 8-3331] design main has unconnected port sw[10]
+WARNING: [Synth 8-3331] design main has unconnected port sw[9]
+WARNING: [Synth 8-3331] design main has unconnected port sw[8]
+WARNING: [Synth 8-3331] design main has unconnected port sw[7]
+WARNING: [Synth 8-3331] design main has unconnected port sw[6]
+WARNING: [Synth 8-3331] design main has unconnected port sw[5]
+WARNING: [Synth 8-3331] design main has unconnected port sw[4]
+WARNING: [Synth 8-3331] design main has unconnected port sw[3]
+WARNING: [Synth 8-3331] design main has unconnected port sw[2]
+WARNING: [Synth 8-3331] design main has unconnected port sw[1]
+WARNING: [Synth 8-3331] design main has unconnected port sw[0]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\timer/num_1/cifra_reg[3] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 766.098 ; gain = 479.438
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 766.098 ; gain = 479.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 766.098 ; gain = 479.438
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (timer/num_0/cifra_reg[2]_P) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (timer/num_0/cifra_reg[1]_P) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (timer/num_0/cifra_reg[0]_P) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (timer/num_1/cifra_reg[2]_P) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (timer/num_1/cifra_reg[1]_P) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (timer/num_1/cifra_reg[0]_P) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (timer/num_2/cifra_reg[2]_P) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (timer/num_2/cifra_reg[1]_P) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (timer/num_2/cifra_reg[0]_P) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (timer/num_3/cifra_reg[2]_P) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (timer/num_3/cifra_reg[1]_P) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (timer/num_3/cifra_reg[0]_P) is unused and will be removed from module main.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 773.559 ; gain = 486.898
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 773.559 ; gain = 486.898
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 773.559 ; gain = 486.898
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 773.559 ; gain = 486.898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 773.559 ; gain = 486.898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 773.559 ; gain = 486.898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 773.559 ; gain = 486.898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     9|
+|3     |LUT1   |     2|
+|4     |LUT2   |    11|
+|5     |LUT3   |     2|
+|6     |LUT4   |    19|
+|7     |LUT5   |     9|
+|8     |LUT6   |    12|
+|9     |FDCE   |    12|
+|10    |FDRE   |    45|
+|11    |LD     |     4|
+|12    |IBUF   |     1|
+|13    |OBUF   |    11|
+|14    |OBUFT  |    16|
++------+-------+------+
+
+Report Instance Areas: 
++------+----------+-------------+------+
+|      |Instance  |Module       |Cells |
++------+----------+-------------+------+
+|1     |top       |             |   154|
+|2     |  CLK1sec |div_frecv_1s |    35|
+|3     |  SSD1    |SSD          |    25|
+|4     |  timer   |timer_ssd    |    65|
+|5     |    num_0 |count9_0     |    15|
+|6     |    num_1 |count5_0     |    12|
+|7     |    num_2 |count9_0_0   |    14|
+|8     |    num_3 |count9_0_1   |    22|
++------+----------+-------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 773.559 ; gain = 486.898
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 50 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 773.559 ; gain = 163.840
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 773.559 ; gain = 486.898
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 782.160 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  LD => LDCE: 4 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+43 Infos, 165 Warnings, 49 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:41 . Memory (MB): peak = 782.160 ; gain = 508.520
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 782.160 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'F:/Facultate_Maria/proiect_masina_maybe/proiect_masina/proiect_masina.runs/synth_1/main.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun May 22 21:27:31 2022...
