@@ -1,0 +1,486 @@
+
+*** Running vivado
+    with args -log main.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
+
+
+****** Vivado v2016.4 (64-bit)
+  **** SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+  **** IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source main.tcl -notrace
+Command: synth_design -top main -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 8604 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 282.094 ; gain = 72.004
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'main' [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:45]
+INFO: [Synth 8-3491] module 'MPG' declared at 'D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/MPG.vhd:36' bound to instance 'MPG_enable' of component 'MPG' [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:140]
+INFO: [Synth 8-638] synthesizing module 'MPG' [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/MPG.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'MPG' (1#1) [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/MPG.vhd:42]
+INFO: [Synth 8-3491] module 'MPG' declared at 'D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/MPG.vhd:36' bound to instance 'MPG_reset' of component 'MPG' [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:141]
+INFO: [Synth 8-3491] module 'sumator_timp' declared at 'D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Sumator_Timp.vhd:35' bound to instance 'SUMATOR_TIMP1' of component 'sumator_timp' [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:142]
+INFO: [Synth 8-638] synthesizing module 'sumator_timp' [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Sumator_Timp.vhd:42]
+WARNING: [Synth 8-614] signal 'reset' is read in the process but is not in the sensitivity list [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Sumator_Timp.vhd:46]
+WARNING: [Synth 8-614] signal 'CLK' is read in the process but is not in the sensitivity list [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Sumator_Timp.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'sumator_timp' (2#1) [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Sumator_Timp.vhd:42]
+INFO: [Synth 8-3491] module 'SSD' declared at 'D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/SSD.vhd:36' bound to instance 'SSD1' of component 'SSD' [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'SSD' [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/SSD.vhd:43]
+WARNING: [Synth 8-614] signal 'digit' is read in the process but is not in the sensitivity list [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/SSD.vhd:57]
+INFO: [Synth 8-226] default block is never used [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/SSD.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'SSD' (3#1) [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/SSD.vhd:43]
+INFO: [Synth 8-3491] module 'div_frecv_1min' declared at 'D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/div_frecv1min.vhd:26' bound to instance 'CLK1min' of component 'div_frecv_1min' [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:144]
+INFO: [Synth 8-638] synthesizing module 'div_frecv_1min' [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/div_frecv1min.vhd:31]
+WARNING: [Synth 8-614] signal 'clk_gate' is read in the process but is not in the sensitivity list [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/div_frecv1min.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'div_frecv_1min' (4#1) [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/div_frecv1min.vhd:31]
+INFO: [Synth 8-3491] module 'div_frecv_2min' declared at 'D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/div_frecv_2min.vhd:26' bound to instance 'CLK2min' of component 'div_frecv_2min' [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:145]
+INFO: [Synth 8-638] synthesizing module 'div_frecv_2min' [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/div_frecv_2min.vhd:31]
+WARNING: [Synth 8-614] signal 'clk_gate' is read in the process but is not in the sensitivity list [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/div_frecv_2min.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'div_frecv_2min' (5#1) [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/div_frecv_2min.vhd:31]
+INFO: [Synth 8-3491] module 'div_frecv_1s' declared at 'D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/div_frecv1sec.vhd:26' bound to instance 'CLK1sec' of component 'div_frecv_1s' [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:146]
+INFO: [Synth 8-638] synthesizing module 'div_frecv_1s' [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/div_frecv1sec.vhd:31]
+WARNING: [Synth 8-614] signal 'clk_gate' is read in the process but is not in the sensitivity list [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/div_frecv1sec.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'div_frecv_1s' (6#1) [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/div_frecv1sec.vhd:31]
+INFO: [Synth 8-3491] module 'timer_ssd' declared at 'D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/timer_ssd.vhd:26' bound to instance 'timer' of component 'timer_ssd' [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:149]
+INFO: [Synth 8-638] synthesizing module 'timer_ssd' [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/timer_ssd.vhd:34]
+INFO: [Synth 8-3491] module 'count9_0' declared at 'D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/count9_0.vhd:35' bound to instance 'num_0' of component 'count9_0' [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/timer_ssd.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'count9_0' [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/count9_0.vhd:42]
+WARNING: [Synth 8-614] signal 'I' is read in the process but is not in the sensitivity list [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/count9_0.vhd:46]
+WARNING: [Synth 8-614] signal 'cifra' is read in the process but is not in the sensitivity list [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/count9_0.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'count9_0' (7#1) [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/count9_0.vhd:42]
+INFO: [Synth 8-3491] module 'count5_0' declared at 'D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/count5_0.vhd:35' bound to instance 'num_1' of component 'count5_0' [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/timer_ssd.vhd:64]
+INFO: [Synth 8-638] synthesizing module 'count5_0' [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/count5_0.vhd:42]
+WARNING: [Synth 8-614] signal 'I' is read in the process but is not in the sensitivity list [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/count5_0.vhd:46]
+WARNING: [Synth 8-614] signal 'cifra' is read in the process but is not in the sensitivity list [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/count5_0.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'count5_0' (8#1) [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/count5_0.vhd:42]
+INFO: [Synth 8-3491] module 'count9_0' declared at 'D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/count9_0.vhd:35' bound to instance 'num_2' of component 'count9_0' [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/timer_ssd.vhd:72]
+INFO: [Synth 8-3491] module 'count9_0' declared at 'D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/count9_0.vhd:35' bound to instance 'num_3' of component 'count9_0' [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/timer_ssd.vhd:80]
+INFO: [Synth 8-256] done synthesizing module 'timer_ssd' (9#1) [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/timer_ssd.vhd:34]
+INFO: [Synth 8-3491] module 'timer_usa' declared at 'D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/timer_usa.vhd:36' bound to instance 'usa' of component 'timer_usa' [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:150]
+INFO: [Synth 8-638] synthesizing module 'timer_usa' [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/timer_usa.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'timer_usa' (10#1) [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/timer_usa.vhd:42]
+WARNING: [Synth 8-614] signal 'sel' is read in the process but is not in the sensitivity list [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:162]
+WARNING: [Synth 8-614] signal 'temp' is read in the process but is not in the sensitivity list [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:162]
+WARNING: [Synth 8-614] signal 'viteza' is read in the process but is not in the sensitivity list [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:162]
+WARNING: [Synth 8-614] signal 'presp' is read in the process but is not in the sensitivity list [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:162]
+WARNING: [Synth 8-614] signal 'clatire' is read in the process but is not in the sensitivity list [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:162]
+WARNING: [Synth 8-614] signal 'out3' is read in the process but is not in the sensitivity list [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:162]
+WARNING: [Synth 8-614] signal 'out2' is read in the process but is not in the sensitivity list [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:162]
+WARNING: [Synth 8-614] signal 'out1' is read in the process but is not in the sensitivity list [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:162]
+WARNING: [Synth 8-614] signal 'out0' is read in the process but is not in the sensitivity list [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:162]
+WARNING: [Synth 8-614] signal 'led_usa' is read in the process but is not in the sensitivity list [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:162]
+WARNING: [Synth 8-614] signal 'digits' is read in the process but is not in the sensitivity list [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:162]
+INFO: [Synth 8-256] done synthesizing module 'main' (11#1) [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:45]
+WARNING: [Synth 8-3331] design count5_0 has unconnected port I[3]
+WARNING: [Synth 8-3331] design timer_ssd has unconnected port EN
+WARNING: [Synth 8-3331] design sumator_timp has unconnected port enable
+WARNING: [Synth 8-3331] design sumator_timp has unconnected port viteza[1]
+WARNING: [Synth 8-3331] design sumator_timp has unconnected port viteza[0]
+WARNING: [Synth 8-3331] design main has unconnected port btn[4]
+WARNING: [Synth 8-3331] design main has unconnected port btn[3]
+WARNING: [Synth 8-3331] design main has unconnected port btn[2]
+WARNING: [Synth 8-3331] design main has unconnected port sw[6]
+WARNING: [Synth 8-3331] design main has unconnected port sw[5]
+WARNING: [Synth 8-3331] design main has unconnected port sw[4]
+WARNING: [Synth 8-3331] design main has unconnected port sw[3]
+WARNING: [Synth 8-3331] design main has unconnected port sw[2]
+WARNING: [Synth 8-3331] design main has unconnected port sw[1]
+WARNING: [Synth 8-3331] design main has unconnected port sw[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 320.598 ; gain = 110.508
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 320.598 ; gain = 110.508
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/facultate/an2sem2/AC/lab1_numarator/Basys3_test_env.xdc]
+Finished Parsing XDC File [D:/facultate/an2sem2/AC/lab1_numarator/Basys3_test_env.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/facultate/an2sem2/AC/lab1_numarator/Basys3_test_env.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 612.000 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 612.000 ; gain = 401.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 612.000 ; gain = 401.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 612.000 ; gain = 401.910
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "cifra" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'PL_reg' [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/count9_0.vhd:49]
+WARNING: [Synth 8-327] inferring latch for variable 'PL_reg' [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/count5_0.vhd:49]
+WARNING: [Synth 8-327] inferring latch for variable 'led_reg' [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:138]
+WARNING: [Synth 8-327] inferring latch for variable 'enable_usa_reg' [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:150]
+WARNING: [Synth 8-327] inferring latch for variable 'res_timer_reg' [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:149]
+WARNING: [Synth 8-327] inferring latch for variable 'seg3_reg' [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:149]
+WARNING: [Synth 8-327] inferring latch for variable 'seg2_reg' [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:149]
+WARNING: [Synth 8-327] inferring latch for variable 'seg1_reg' [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:149]
+WARNING: [Synth 8-327] inferring latch for variable 'seg0_reg' [D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.srcs/sources_1/new/Main.vhd:149]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 612.000 ; gain = 401.910
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 15    
++---Muxes : 
+	   3 Input     16 Bit        Muxes := 3     
+	   4 Input     15 Bit        Muxes := 3     
+	   7 Input     15 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 24    
+	   2 Input      3 Bit        Muxes := 2     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module main 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     16 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 4     
+Module MPG 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
+Module sumator_timp 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     15 Bit        Muxes := 3     
+	   7 Input     15 Bit        Muxes := 2     
+Module SSD 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 2     
+Module div_frecv_1min 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module div_frecv_2min 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module div_frecv_1s 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module count9_0 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 6     
+Module count5_0 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 6     
+	   2 Input      3 Bit        Muxes := 2     
+	   6 Input      3 Bit        Muxes := 1     
+Module timer_ssd 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module timer_usa 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design main has unconnected port led[6]
+WARNING: [Synth 8-3331] design main has unconnected port led[5]
+WARNING: [Synth 8-3331] design main has unconnected port led[4]
+WARNING: [Synth 8-3331] design main has unconnected port led[3]
+WARNING: [Synth 8-3331] design main has unconnected port btn[4]
+WARNING: [Synth 8-3331] design main has unconnected port btn[3]
+WARNING: [Synth 8-3331] design main has unconnected port btn[2]
+WARNING: [Synth 8-3331] design main has unconnected port sw[6]
+WARNING: [Synth 8-3331] design main has unconnected port sw[5]
+WARNING: [Synth 8-3331] design main has unconnected port sw[4]
+WARNING: [Synth 8-3331] design main has unconnected port sw[3]
+WARNING: [Synth 8-3331] design main has unconnected port sw[2]
+WARNING: [Synth 8-3331] design main has unconnected port sw[1]
+WARNING: [Synth 8-3331] design main has unconnected port sw[0]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\usa/led_out_reg__1 )
+INFO: [Synth 8-3886] merging instance 'SUMATOR_TIMP1/timp_reg[4]' (FDC) to 'SUMATOR_TIMP1/timp_reg[14]'
+INFO: [Synth 8-3886] merging instance 'SUMATOR_TIMP1/timp_reg[0]' (FDC) to 'SUMATOR_TIMP1/timp_reg[15]'
+INFO: [Synth 8-3886] merging instance 'SUMATOR_TIMP1/timp_reg[1]' (FDC) to 'SUMATOR_TIMP1/timp_reg[15]'
+INFO: [Synth 8-3886] merging instance 'SUMATOR_TIMP1/timp_reg[10]' (FDC) to 'SUMATOR_TIMP1/timp_reg[15]'
+INFO: [Synth 8-3886] merging instance 'SUMATOR_TIMP1/timp_reg[2]' (FDC) to 'SUMATOR_TIMP1/timp_reg[15]'
+INFO: [Synth 8-3886] merging instance 'SUMATOR_TIMP1/timp_reg[15]' (FDC) to 'SUMATOR_TIMP1/timp_reg[11]'
+INFO: [Synth 8-3886] merging instance 'SUMATOR_TIMP1/timp_reg[7]' (FDC) to 'SUMATOR_TIMP1/timp_reg[11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\timer/num_1/cifra_reg[3] )
+INFO: [Synth 8-3886] merging instance 'SUMATOR_TIMP1/timp_reg[11]' (FDC) to 'SUMATOR_TIMP1/timp_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SUMATOR_TIMP1/timp_reg[3] )
+INFO: [Synth 8-3886] merging instance 'seg1_reg[0]' (LD) to 'seg3_reg[2]'
+INFO: [Synth 8-3886] merging instance 'seg0_reg[0]' (LD) to 'seg0_reg[3]'
+INFO: [Synth 8-3886] merging instance 'seg1_reg[3]' (LD) to 'seg0_reg[3]'
+INFO: [Synth 8-3886] merging instance 'seg0_reg[1]' (LD) to 'seg0_reg[3]'
+INFO: [Synth 8-3886] merging instance 'seg2_reg[2]' (LD) to 'seg0_reg[3]'
+INFO: [Synth 8-3886] merging instance 'seg0_reg[2]' (LD) to 'seg0_reg[3]'
+INFO: [Synth 8-3886] merging instance 'seg3_reg[3]' (LD) to 'seg0_reg[3]'
+INFO: [Synth 8-3886] merging instance 'seg2_reg[3]' (LD) to 'seg0_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\seg0_reg[3] )
+WARNING: [Synth 8-3332] Sequential element (usa/led_out_reg__1) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (MPG_enable/count_int_reg[16]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (MPG_enable/count_int_reg[17]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (MPG_enable/count_int_reg[18]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (MPG_enable/count_int_reg[19]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (MPG_enable/count_int_reg[20]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (MPG_enable/count_int_reg[21]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (MPG_enable/count_int_reg[22]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (MPG_enable/count_int_reg[23]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (MPG_enable/count_int_reg[24]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (MPG_enable/count_int_reg[25]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (MPG_enable/count_int_reg[26]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (MPG_enable/count_int_reg[27]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (MPG_enable/count_int_reg[28]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (MPG_enable/count_int_reg[29]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (MPG_enable/count_int_reg[30]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (MPG_enable/count_int_reg[31]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (SUMATOR_TIMP1/timp_reg[3]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (timer/num_1/cifra_reg[3]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (seg0_reg[3]) is unused and will be removed from module main.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 612.000 ; gain = 401.910
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 612.000 ; gain = 401.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 612.000 ; gain = 401.910
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 612.000 ; gain = 401.910
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 612.000 ; gain = 401.910
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 612.000 ; gain = 401.910
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 612.000 ; gain = 401.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 612.000 ; gain = 401.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 612.000 ; gain = 401.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 612.000 ; gain = 401.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    20|
+|3     |LUT1   |    82|
+|4     |LUT2   |    24|
+|5     |LUT3   |    13|
+|6     |LUT4   |    38|
+|7     |LUT5   |    18|
+|8     |LUT6   |    48|
+|9     |MUXF7  |     3|
+|10    |FDCE   |    22|
+|11    |FDPE   |     9|
+|12    |FDRE   |    94|
+|13    |LD     |    23|
+|14    |LDC    |     8|
+|15    |IBUF   |    12|
+|16    |OBUF   |    23|
+|17    |OBUFT  |     4|
++------+-------+------+
+
+Report Instance Areas: 
++------+----------------+---------------+------+
+|      |Instance        |Module         |Cells |
++------+----------------+---------------+------+
+|1     |top             |               |   442|
+|2     |  CLK1sec       |div_frecv_1s   |    52|
+|3     |  CLK2min       |div_frecv_2min |    70|
+|4     |  MPG_enable    |MPG            |    45|
+|5     |  MPG_reset     |MPG_0          |     4|
+|6     |  SSD1          |SSD            |    41|
+|7     |  SUMATOR_TIMP1 |sumator_timp   |    14|
+|8     |  timer         |timer_ssd      |   139|
+|9     |    num_0       |count9_0       |    17|
+|10    |    num_1       |count5_0       |    37|
+|11    |    num_2       |count9_0_1     |    45|
+|12    |    num_3       |count9_0_2     |    38|
+|13    |  usa           |timer_usa      |     3|
++------+----------------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 612.000 ; gain = 401.910
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 43 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 612.000 ; gain = 110.508
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 612.000 ; gain = 401.910
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 63 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 31 instances were transformed.
+  LD => LDCE: 23 instances
+  LDC => LDCE: 8 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+80 Infos, 79 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 612.000 ; gain = 401.910
+INFO: [Common 17-1381] The checkpoint 'D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.runs/synth_1/main.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 612.000 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed May 25 14:03:43 2022...

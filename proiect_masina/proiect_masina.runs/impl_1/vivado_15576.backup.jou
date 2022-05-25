@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Tue May 24 11:50:06 2022
+# Process ID: 15576
+# Current directory: D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.runs/impl_1
+# Command line: vivado.exe -log timer_ssd.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source timer_ssd.tcl -notrace
+# Log file: D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.runs/impl_1/timer_ssd.vdi
+# Journal file: D:/facultate/an2sem2/psn/proiect_masina/proiect_masina.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source timer_ssd.tcl -notrace
